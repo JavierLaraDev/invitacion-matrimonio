@@ -1,65 +1,146 @@
-import Image from "next/image";
+"use client";
 
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { Alex_Brush } from "next/font/google";
+
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+})
 export default function Home() {
+  const router=useRouter();
+  const handleButtonClick = () => {
+    router.push("/invitacion");
+  }
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <section className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-[#fff9ef] px-4">
+
+      {/* Fondo acuarela */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffe4dd_10%,transparent_70%)] opacity-80"></div>
+
+      {/* Contenedor principal */}
+      <div className="relative flex flex-col items-center z-10">
+
+        {/* Círculo con iniciales e imágenes */}
+        <div className="relative w-[300px] h-[300px] flex items-center justify-center">
+
+          {/* Círculo dorado */}
+          <div className="absolute inset-0 rounded-full border-[3px] border-[#d59739]"></div>
+
+          {/* Flores arriba */}
+          <img
+            src="images/flores-arriba.png"
+            className="absolute w-44"
+            style={{
+              top: "-10px",
+              right: "-25px",
+              transform: "rotate(20deg)",
+            }}
+            alt="Flores arriba"
+          />
+
+          {/* Flores abajo */}
+          <img
+            src="images/flores-abajo.png"
+            className="absolute w-44"
+            style={{
+              bottom: "-10px",
+              left: "-25px",
+              transform: "rotate(20deg)",
+            }}
+            alt="Flores abajo"
+          />
+
+          {/* Iniciales */}
+          <div className="text-center">
+            <h1 className={`text-[#c59d5f] text-6xl font-['Alex Brush'] italic ${alexBrush.className}`} >
+              D y G
+            </h1>
+
+            <p className="mt-3 text-[#c59d5f] tracking-widest text-sm font-semibold">
+              28 . 03 . 2026
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Flecha animada */}
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+          className="mt-10"
+        >
+          <svg
+            width="70"
+            height="70"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            {/* Óvalo */}
+            <circle
+              cx="50"
+              cy="50"
+              r="45"
+              stroke="#c59d5f"
+              strokeWidth="4"
+              fill="none"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+            {/* Flechas */}
+            <path
+              d="M35 38 L50 53 L65 38"
+              stroke="#c59d5f"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M35 50 L50 65 L65 50"
+              stroke="#c59d5f"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M35 62 L50 77 L65 62"
+              stroke="#c59d5f"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </motion.div>
+
+        <motion.button
+  whileTap={{ scale: 0.95 }}
+  onClick={handleButtonClick}
+  className="
+    mt-6
+    bg-[#e9a3a8]
+    text-white
+    
+    px-6 sm:px-4 md:px-4
+    py-3 sm:py-3 md:py-3
+    
+    text-base sm:text-base md:text-base
+    
+    rounded-tr-none
+    rounded-bl-none
+    rounded-tl-[35px] sm:rounded-tl-[40px] md:rounded-tl-[35px]
+    rounded-br-[35px] sm:rounded-br-[40px] md:rounded-br-[35px]
+
+    shadow-md
+    transition-all duration-300 ease-in-out
+    hover:bg-[#59040e]
+    hover:scale-105
+  "
+>
+  Ingresar a mi invitación
+</motion.button>
+
+      </div>
+    </section>
   );
 }
