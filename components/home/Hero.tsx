@@ -5,7 +5,7 @@ export default function Hero(){
 
       {/* FOTO */}
       <img
-  src="/images/pareja.png"
+  src="/images/pareja.jpeg"
   className="
   w-full
   h-full
@@ -14,7 +14,7 @@ export default function Hero(){
   "
   style={{
     WebkitMaskImage: `
-      linear-gradient(to top, transparent 0%, black 45%),
+      linear-gradient(to top, transparent 2%, black 20%),
       linear-gradient(to bottom, transparent 0%, black 1.5%),
       linear-gradient(to left, transparent 0%, black 2%),
       linear-gradient(to right, transparent 0%, black 2%)
@@ -32,7 +32,7 @@ export default function Hero(){
         bottom-[-45px]
         left-1/2
         -translate-x-1/2
-        w-[108%]
+        w-full
         max-w-none
         pointer-events-none
         select-none

@@ -1,9 +1,20 @@
-import React from 'react'
+"use client"
 import { DateFrame } from './DateFrame'
 import { Counter } from './Counter'
 import { Calendar } from "lucide-react";
 
 export default function DateSection() {
+  const handleCalendar = () => {
+
+  const url =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=Matrimonio%20Dyland%20y%20Giancarla%20❤️" +
+    "&dates=20260502T140000/20260502T190000" +
+    "&details=Te%20esperamos%20para%20celebrar%20nuestro%20gran%20día" +
+    "&location=Salon%20de%20Eventos%20Nelly's"
+
+  window.open(url, "_blank")
+}
 
   return (
 
@@ -16,7 +27,6 @@ export default function DateSection() {
   lg:max-w-[1200px]
   mx-auto
   bg-white
-  shadow-xl
   overflow-hidden
   "
     >
@@ -30,7 +40,7 @@ export default function DateSection() {
   top-0
   w-30 md:w-40 xl:w-64
   -translate-x-2/3
-  opacity-60
+
   pointer-events-none
   "
       />
@@ -44,7 +54,6 @@ export default function DateSection() {
   bottom-0
   w-30 md:w-40 xl:w-64
   translate-x-2/3
-  opacity-60
   pointer-events-none
   "
       />
@@ -64,7 +73,7 @@ export default function DateSection() {
     "
       >
 
-        <div className="text-pink-300 text-4xl mb-6 animate-[heartbeat_1.5s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,182,193,0.8)]">
+        <div className="text-[#e6afa7] text-4xl mb-6 animate-[heartbeat_1.5s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,182,193,0.8)]">
           ❤
         </div>
 
@@ -73,33 +82,31 @@ export default function DateSection() {
         <Counter />
 
         <div className="mt-10">
-          <button
-            className="
-  flex items-center gap-2
+  <button
+  onClick={handleCalendar}
+  className="
+  flex items-center gap-3
   border border-[#c89b5a]
   text-black font-['Alex_Brush']
-  px-6 py-2
+  px-7 py-3
   rounded
   hover:bg-[#c89b5a]
   hover:text-white
   transition
+  text-xl md:text-xl
   "
-          >
-
-            <Calendar
-              className="
-    w-6 h-6
+>
+  <Calendar
+    className="
+    w-7 h-7 md:w-6 md:h-6
     text-[#fda5d5]
     stroke-[1.5]
-    [stroke-dasharray:100]
-    animate-[drawLoop_3s_ease-in-out_infinite,pulseSoft_2s_ease-in-out_infinite]
     "
-            />
+  />
 
-            Agendar en el calendario
-
-          </button>
-        </div>
+  Agendar en el calendario
+</button>
+</div>
 
       </div>
 

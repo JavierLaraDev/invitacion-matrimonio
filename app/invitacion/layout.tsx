@@ -1,4 +1,4 @@
-import Navbar from '@/components/navbar/Navbar';
+import Navbar from '@/components/navbar/Navbar'
 import React from 'react'
 
 export default function InvitacionLayout({
@@ -11,7 +11,7 @@ export default function InvitacionLayout({
 
       <Navbar/>
 
-      <main className="pt-16">
+      <main className="pt-16 flex justify-center">
         {children}
       </main>
 

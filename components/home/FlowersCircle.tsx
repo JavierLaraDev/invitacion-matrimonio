@@ -7,10 +7,10 @@ export default function FlowersCircle(){
 
         {/* Círculo */}
         <div className="
-          w-[250px] h-[250px]
+          w-[260px] h-[260px]
           lg:w-[320px] lg:h-[320px]
           rounded-full
-          border-[2px]
+          border-[3px]
           border-[#c59d5f]
           flex
           items-center
@@ -19,7 +19,7 @@ export default function FlowersCircle(){
 
           <h2 className="
             text-[#c59d5f]
-            text-4xl
+            text-5xl
             lg:text-5xl
             text-center
             font-['Alex_Brush']
@@ -38,10 +38,10 @@ export default function FlowersCircle(){
           src="/images/flores-arriba.png"
           className="
             absolute
-            w-32
+            w-40
             lg:w-40
-            -top-5
-            right-[-5px]
+            -top-6
+            right-[-10px]
             rotate-[20deg]
           "
         />
@@ -51,9 +51,9 @@ export default function FlowersCircle(){
           src="/images/flores-abajo.png"
           className="
             absolute
-            w-32
+            w-40
             lg:w-40
-            -bottom-5
+            -bottom-7
             left-[-10px]
             -rotate-[-20deg]
           "

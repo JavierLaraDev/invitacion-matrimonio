@@ -5,7 +5,7 @@ import FlowersCircle from "@/components/home/FlowersCircle"
 import MusicPlayer from "@/components/home/MusicPlayer"
 export const Home = () => {
   return (
-    <section id="inicio" className=" scroll-mt-24 w-full max-w-[420px] lg:max-w-[1200px] lg:grid lg:grid-cols-2 bg-white shadow-xl overflow-hidden">
+    <section id="inicio" className=" scroll-mt-24 w-full max-w-[420px] lg:max-w-[1200px] lg:grid lg:grid-cols-2 bg-white overflow-hidden">
 
         {/* IMAGEN */}
         <div className="w-full h-[420px] lg:h-auto">

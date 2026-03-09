@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { FaBackward, FaForward, FaHeart } from "react-icons/fa";
+import { FaStepBackward, FaStepForward, FaHeart } from "react-icons/fa";
 
 export default function MusicPlayer() {
 
@@ -22,13 +22,13 @@ export default function MusicPlayer() {
   };
 
   return (
-    <section className="flex flex-col items-center text-center px-6 py-6">
+    <section className="flex flex-col items-center text-center px-3 py-6">
 
-      <p className="font-['Alex_Brush'] text-gray-600 text-lg md:text-2xl font-light">
+      <p className="font-['Alex_Brush'] text-gray-600 text-2xl md:text-2xl font-normal">
   Presiona el{" "}
   <span
     className="
-    text-pink-400
+    text-[#e6afa7]
     inline-block
     animate-[heartbeat_2s_ease-in-out_infinite]
     drop-shadow-[0_0_8px_rgba(255,182,193,0.9)]
@@ -39,24 +39,23 @@ export default function MusicPlayer() {
   para escuchar nuestra canción
 </p>
 
-      <div className="w-40 h-[2px] bg-[#c78c3a] my-4"></div>
+     <div className="w-100 md:w-80 lg:w-100 h-px bg-linear-to-r from-transparent via-[#c78c3a] to-transparent animate-pulse"></div>
+      <div className="flex items-center gap-10 text-[#c78c3a] text-2xl md:text-4xl">
 
-      <div className="flex items-center gap-10 text-[#c78c3a] text-3xl md:text-4xl">
-
-        <FaBackward className="cursor-pointer hover:scale-110 transition" />
+        <FaStepBackward className="cursor-pointer hover:scale-110 transition text-xl" />
 
         <button
           onClick={toggleMusic}
-          className="bg-[#c78c3a] text-white rounded-full w-14 h-14 flex items-center justify-center hover:scale-110 transition"
+          className="bg-[#c78c3a] text-white text-lg rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition my-2"
         >
           <FaHeart />
         </button>
 
-        <FaForward className="cursor-pointer hover:scale-110 transition" />
+        <FaStepForward className="cursor-pointer hover:scale-110 transition text-xl" />
 
       </div>
 
-      <audio ref={audioRef} src="/music/song.mp3" />
+      <audio ref={audioRef} src="/music/mojado.mp4" />
 
     </section>
   );

@@ -1,6 +1,46 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from "react"
 
 export const Counter = () => {
+
+  const weddingDate = new Date("2026-05-02T00:00:00")
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  })
+
+  useEffect(() => {
+
+    const timer = setInterval(() => {
+
+      const now = new Date()
+      const difference = weddingDate.getTime() - now.getTime()
+
+      if (difference > 0) {
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24)
+        const minutes = Math.floor((difference / (1000 * 60)) % 60)
+        const seconds = Math.floor((difference / 1000) % 60)
+
+        setTimeLeft({
+          days,
+          hours,
+          minutes,
+          seconds
+        })
+
+      }
+
+    }, 1000)
+
+    return () => clearInterval(timer)
+
+  }, [])
+
   return (
     <div className="mt-12">
 
@@ -8,71 +48,52 @@ export const Counter = () => {
         Solo faltan
       </p>
 
-      {/* SEPARADOR */}
-      <div className="flex items-center justify-center gap-0 my-0">
-
-        <div className="flex flex-col gap-0">
-          <div className="h-px w-36 sm:w-48 bg-linear-to-r from-transparent to-[#c89b5a] -rotate-1" />
-          <div className="h-px w-36 sm:w-48 bg-linear-to-r from-transparent to-[#c89b5a]" />
-        </div>
-
-        <span className="text-[#c89b5a] text-xl">❖</span>
-
-        <div className="flex flex-col gap-0">
-          <div className="h-px w-36 sm:w-48 bg-linear-to-l from-transparent to-[#c89b5a] rotate-1" />
-          <div className="h-px w-36 sm:w-48 bg-linear-to-l from-transparent to-[#c89b5a] " />
-        </div>
-
-      </div>
-
       {/* CONTADOR */}
-      <div className="flex items-start justify-center gap-3 sm:gap-6 text-center mt-0">
+      <div className="flex items-start justify-center gap-4 sm:gap-6 text-center mt-4">
 
         <div>
-          <div className="text-4xl sm:text-4xl text-pink-300">120</div>
-          <div className="text-xs text-black tracking-widest mt-1 font-['Alex_Brush']">Días</div>
+          <div className="text-[38px] sm:text-4xl text-pink-300">
+            {timeLeft.days}
+          </div>
+          <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
+            Días
+          </div>
         </div>
 
-        <div className="text-4xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
 
         <div>
-          <div className="text-4xl sm:text-4xl text-pink-300">05</div>
-          <div className="text-xs text-black tracking-widest mt-1 font-['Alex_Brush']">Horas</div>
+          <div className="text-[38px] sm:text-4xl text-pink-300">
+            {timeLeft.hours}
+          </div>
+          <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
+            Horas
+          </div>
         </div>
 
-        <div className="text-4xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
 
         <div>
-          <div className="text-4xl sm:text-4xl text-pink-300">33</div>
-          <div className="text-xs text-black font-['Alex_Brush'] tracking-widest mt-1">Min</div>
+          <div className="text-[38px] sm:text-4xl text-pink-300">
+            {timeLeft.minutes}
+          </div>
+          <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
+            Min
+          </div>
         </div>
 
-        <div className="text-4xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
 
         <div>
-          <div className="text-4xl sm:text-4xl text-pink-300">02</div>
-          <div className="text-xs text-black font-['Alex_Brush'] tracking-widest mt-1">Seg</div>
+          <div className="text-[38px] sm:text-4xl text-pink-300">
+            {timeLeft.seconds}
+          </div>
+          <div className="text-sm lg:text-lg text-black font-['Alex_Brush'] tracking-widest mt-1">
+            Seg
+          </div>
         </div>
 
       </div>
-
-      {/* SEPARADOR */}
-      <div className="flex items-center justify-center gap-0 my-0">
-
-        <div className="flex flex-col gap-0">
-          <div className="h-px w-32 sm:w-42 bg-linear-to-r from-transparent to-[#c89b5a] -rotate-1" />
-          <div className="h-px w-32 sm:w-42 bg-linear-to-r from-transparent to-[#c89b5a]" />
-        </div>
-
-        <span className="text-[#c89b5a] text-xl">❖</span>
-
-        <div className="flex flex-col gap-0">
-          <div className="h-px w-32 sm:w-42 bg-linear-to-l from-transparent to-[#c89b5a] rotate-1" />
-          <div className="h-px w-32 sm:w-42 bg-linear-to-l from-transparent to-[#c89b5a] " />
-        </div>
-
-      </div>
-
 
     </div>
   )

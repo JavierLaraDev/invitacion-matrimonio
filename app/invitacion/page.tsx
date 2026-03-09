@@ -1,20 +1,21 @@
 import { Home } from "@/components/home/Home";
-import { Alex_Brush } from 'next/font/google';
+import { Alex_Brush } from "next/font/google";
 import DateSection from "@/components/date/DateSection";
+import ParentsSection from "@/components/parents/ParentsSection";
 
 const alexBrush = Alex_Brush({
   weight: "400",
   subsets: ["latin"],
-})
+});
+
 export default function InvitacionPage() {
   return (
+    <div className={`w-full max-w-[1200px] ${alexBrush.className}`}>
 
-    <main className="min-h-screen bg-[#f3efe9] flex flex-col items-center font-[alexBrush]">
+      <Home />
+      <DateSection />
+      <ParentsSection />
 
-      <Home/>
-      <DateSection/>
-
-    </main>
-    
-  )
+    </div>
+  );
 }
