@@ -16,7 +16,7 @@ export default function ParentsSection() {
     >
       {/* FLOR LATERAL IZQUIERDA */}
       <img
-        src="/images/flores-lateral.png"
+        src="/images/flores-lateral.webp"
         className="
         absolute
         left-[-90px]
@@ -55,7 +55,7 @@ export default function ParentsSection() {
 
         {/* FLORES CENTRALES */}
         <img
-          src="/images/flores-centro.png"
+          src="/images/flores-centro.webp"
           className="w-60 md:w-70 lg:w-80 mt-2"
           alt="flores"
         />
@@ -113,7 +113,7 @@ export default function ParentsSection() {
 
         {/* FLORES INFERIORES */}
         <img
-          src="/images/flores-centro.png"
+          src="/images/flores-centro.webp"
           className="w-60 md:w-70 lg:w-80 mt-4"
           alt="flores"
         />

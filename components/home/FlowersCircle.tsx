@@ -35,7 +35,7 @@ export default function FlowersCircle(){
 
         {/* FLORES ARRIBA */}
         <img
-          src="/images/flores-arriba.png"
+          src="/images/flores-arriba.webp"
           className="
             absolute
             w-40
@@ -48,7 +48,7 @@ export default function FlowersCircle(){
 
         {/* FLORES ABAJO */}
         <img
-          src="/images/flores-abajo.png"
+          src="/images/flores-abajo.webp"
           className="
             absolute
             w-40

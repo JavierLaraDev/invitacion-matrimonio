@@ -5,7 +5,7 @@ export default function Hero(){
 
       {/* FOTO */}
       <img
-  src="/images/pareja.jpeg"
+  src="/images/pareja.webp"
   className="
   w-full
   h-full
@@ -26,7 +26,7 @@ export default function Hero(){
 
       {/* ADORNO */}
       <img
-        src="/images/adorno-boda.png"
+        src="/images/adorno-boda.webp"
         className="
         absolute
         bottom-[-45px]

@@ -31,7 +31,7 @@ export default function Home() {
 
           {/* Flores arriba */}
           <img
-            src="images/flores-arriba.png"
+            src="images/flores-arriba.webp"
             className="absolute w-44"
             style={{
               top: "-10px",
@@ -43,7 +43,7 @@ export default function Home() {
 
           {/* Flores abajo */}
           <img
-            src="images/flores-abajo.png"
+            src="images/flores-abajo.webp"
             className="absolute w-44"
             style={{
               bottom: "-10px",

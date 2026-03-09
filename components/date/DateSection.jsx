@@ -33,7 +33,7 @@ export default function DateSection() {
 
       {/* FLOR IZQUIERDA */}
       <img
-        src="/images/flor-left.png"
+        src="/images/flor-left.webp"
         className="
   absolute
   left-0
@@ -47,7 +47,7 @@ export default function DateSection() {
 
       {/* FLOR DERECHA */}
       <img
-        src="/images/flor-right.png"
+        src="/images/flor-right.webp"
         className="
   absolute
   right-0
