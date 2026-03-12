@@ -2,6 +2,7 @@ import { Home } from "@/components/home/Home";
 import { Alex_Brush } from "next/font/google";
 import DateSection from "@/components/date/DateSection";
 import ParentsSection from "@/components/parents/ParentsSection";
+import LocationSection from "@/components/ubicacion/LocationSection";
 
 const alexBrush = Alex_Brush({
   weight: "400",
@@ -15,7 +16,7 @@ export default function InvitacionPage() {
       <Home />
       <DateSection />
       <ParentsSection />
-
+      <LocationSection />
     </div>
   );
 }

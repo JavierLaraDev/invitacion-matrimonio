@@ -52,7 +52,7 @@ export const Counter = () => {
       <div className="flex items-start justify-center gap-4 sm:gap-6 text-center mt-4">
 
         <div>
-          <div className="text-[38px] sm:text-4xl text-pink-300">
+          <div className="text-[38px] sm:text-4xl text-[#ffb9bd]">
             {timeLeft.days}
           </div>
           <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
@@ -60,10 +60,10 @@ export const Counter = () => {
           </div>
         </div>
 
-        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-[#ffb9bd]">:</div>
 
         <div>
-          <div className="text-[38px] sm:text-4xl text-pink-300">
+          <div className="text-[38px] sm:text-4xl text-[#ffb9bd]">
             {timeLeft.hours}
           </div>
           <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
@@ -71,10 +71,10 @@ export const Counter = () => {
           </div>
         </div>
 
-        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-[#ffb9bd]">:</div>
 
         <div>
-          <div className="text-[38px] sm:text-4xl text-pink-300">
+          <div className="text-[38px] sm:text-4xl text-[#ffb9bd]">
             {timeLeft.minutes}
           </div>
           <div className="text-sm lg:text-lg text-black tracking-widest mt-1 font-['Alex_Brush']">
@@ -82,10 +82,10 @@ export const Counter = () => {
           </div>
         </div>
 
-        <div className="text-3xl sm:text-4xl text-pink-300">:</div>
+        <div className="text-3xl sm:text-4xl text-[#ffb9bd]">:</div>
 
         <div>
-          <div className="text-[38px] sm:text-4xl text-pink-300">
+          <div className="text-[38px] sm:text-4xl text-[#ffb9bd]">
             {timeLeft.seconds}
           </div>
           <div className="text-sm lg:text-lg text-black font-['Alex_Brush'] tracking-widest mt-1">

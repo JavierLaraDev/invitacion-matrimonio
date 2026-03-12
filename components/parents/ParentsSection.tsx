@@ -1,51 +1,11 @@
 export default function ParentsSection() {
   return (
-    <section
-      id="nuestros-padres"
-      className="
-      relative
-      w-full
-      max-w-[420px]
-      lg:max-w-[1200px]
-      bg-white
-      py-16
-      flex
-      justify-center
-      overflow-hidden
-      "
-    >
+    <section id="nuestros-padres" className=" relative w-full max-w-[420px] lg:max-w-[1200px] bg-white py-8 sm:py-16 flex justify-center overflow-hidden ">
       {/* FLOR LATERAL IZQUIERDA */}
-      <img
-        src="/images/flores-lateral.webp"
-        className="
-        absolute
-        left-[-90px]
-        top-[250px]
-        md:top-[100px]
-        lg:top-[120px]
-        w-80
-        md:w-80
-        lg:w-100
-        opacity-90
-        pointer-events-none
-        select-none
-        rotate-[-40deg]
-        "
-        alt="flor lateral"
-      />
+      <img src="/images/flores-lateral.webp" className=" absolute left-[-90px] top-[250px] md:top-[100px] lg:top-[120px] w-80 md:w-80 lg:w-100 opacity-90
+           pointer-events-none select-none rotate-[-40deg] " alt="flor lateral"/>
 
-      <div
-        className="
-        w-full
-        max-w-[420px]
-        lg:max-w-[900px]
-        px-4
-        text-center
-        flex
-        flex-col
-        items-center
-        "
-      >
+      <div className=" w-full max-w-[420px] lg:max-w-[900px] px-4 text-center flex flex-col items-center ">
         {/* TITULO */}
         <h2 className="text-[#c78c3a] text-4xl font-['Alex_Brush'] leading-relaxed">
           Con la bendición de Dios

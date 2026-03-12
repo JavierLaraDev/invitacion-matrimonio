@@ -40,7 +40,6 @@ export default function DateSection() {
   top-0
   w-30 md:w-40 xl:w-64
   -translate-x-2/3
-
   pointer-events-none
   "
       />
@@ -65,7 +64,8 @@ export default function DateSection() {
     mx-auto
     text-center
     px-4 md:px-6
-    py-3 md:py-16
+    py-8 md:py-16
+
     flex
     flex-col
     items-center
@@ -73,7 +73,7 @@ export default function DateSection() {
     "
       >
 
-        <div className="text-[#e6afa7] text-4xl mb-6 animate-[heartbeat_1.5s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,182,193,0.8)]">
+        <div className="text-[#ffb9bd] text-4xl mb-6 animate-[heartbeat_1.5s_ease-in-out_infinite] drop-shadow-[0_0_8px_rgba(255,182,193,0.8)]">
           ❤
         </div>
 
@@ -99,7 +99,7 @@ export default function DateSection() {
   <Calendar
     className="
     w-7 h-7 md:w-6 md:h-6
-    text-[#fda5d5]
+    text-[#ffb9bd]
     stroke-[1.5]
     "
   />
