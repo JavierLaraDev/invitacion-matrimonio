@@ -1,42 +1,54 @@
-"use client"
+"use client";
 
-import React from "react"
-import { motion } from "framer-motion"
-import TimelineItem from "./TimelineItem"
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import TimelineItem from "./TimelineItem";
 
 export type Event = {
-  time: string
-  title: string
-  icon: string
-}
+  time: string;
+  title: string;
+  icon: string;
+};
 
 const events: Event[] = [
   { time: "14:00", title: "Ceremonia Religiosa", icon: "/images/iglesia-icon.webp" },
   { time: "16:00", title: "Recepción Social", icon: "/images/recepcion-icon.webp" },
   { time: "17:15", title: "Ingreso de los novios y Brindis", icon: "/images/ingreso-icon.webp" },
   { time: "18:00", title: "Tanda Bailable", icon: "/images/baile-icon.webp" },
-]
+];
 
 export default function ItinerarySection() {
   return (
-    <section id="itinerario" className="relative py-16 px-6 bg-[#fdfaf7] overflow-hidden">
+    <section
+      id="itinerario"
+      className="relative py-16 px-6 bg-[#fdfaf7] overflow-hidden"
+    >
 
       {/* FLORES */}
-      <img
+      <Image
         src="/images/flor-rosa.webp"
-        className="absolute right-[-80px] top-10 w-44 opacity-60 pointer-events-none"
-        alt=""
+        alt="flor decorativa"
+        width={180}
+        height={180}
+        sizes="(max-width: 768px) 120px, 180px"
+        className="absolute right-[-80px] top-10 w-44 opacity-60 pointer-events-none select-none"
       />
-      <img
+
+      <Image
         src="/images/pimpollo.webp"
-        className="absolute left-[-50px] bottom-0 w-44 opacity-60 pointer-events-none"
-        alt=""
+        alt="flor decorativa"
+        width={180}
+        height={180}
+        sizes="(max-width: 768px) 120px, 180px"
+        className="absolute left-[-50px] bottom-0 w-44 opacity-60 pointer-events-none select-none"
       />
 
       {/* TITULO */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }} // 🔥 evita animaciones repetidas
         transition={{ duration: 0.6 }}
         className="text-center text-5xl font-[Alex_Brush] text-[#c58a3c] mb-10"
       >
@@ -57,7 +69,8 @@ export default function ItinerarySection() {
             />
           ))}
         </div>
+
       </div>
     </section>
-  )
+  );
 }

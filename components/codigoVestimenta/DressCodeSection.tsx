@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+
 export default function DressCodeSection() {
   return (
     <section
@@ -15,30 +19,37 @@ export default function DressCodeSection() {
       "
     >
 
-    
-
       {/* FLOR DERECHA */}
-      <img
+      <Image
         src="/images/flor-rosa.webp"
-        className="absolute right-[-50px] -top-[10px] w-40 opacity-90 pointer-events-none"
-        alt="flor"
+        alt="flor decorativa"
+        width={160}
+        height={160}
+        sizes="(max-width: 768px) 120px, 160px"
+        className="absolute right-[-50px] -top-[10px] w-40 opacity-90 pointer-events-none select-none"
       />
 
       {/* FLOR IZQUIERDA */}
-      <img
+      <Image
         src="/images/pimpollo.webp"
-        className="absolute left-[-50px] bottom-20 w-40 opacity-90 pointer-events-none"
-        alt="flor"
+        alt="flor decorativa"
+        width={160}
+        height={160}
+        sizes="(max-width: 768px) 120px, 160px"
+        className="absolute left-[-50px] bottom-20 w-40 opacity-90 pointer-events-none select-none"
       />
 
       {/* CONTENIDO */}
       <div className="flex flex-col items-center text-center relative z-10">
 
         {/* ICONO */}
-        <img
+        <Image
           src="/images/corbatin.webp"
+          alt="icono de vestimenta formal"
+          width={256}
+          height={256}
+          sizes="(max-width: 768px) 192px, 256px"
           className="w-48 sm:w-64 mb-6"
-          alt="moño"
         />
 
         {/* TITULO */}
@@ -77,10 +88,13 @@ export default function DressCodeSection() {
 
       {/* FLORES INFERIORES */}
       <div className="flex justify-center mt-8">
-        <img
+        <Image
           src="/images/arreglo-flores.webp"
+          alt="flores decorativas"
+          width={256}
+          height={256}
+          sizes="(max-width: 768px) 192px, 256px"
           className="w-48 sm:w-64 opacity-90"
-          alt="flores"
         />
       </div>
 

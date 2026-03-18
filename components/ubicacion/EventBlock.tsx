@@ -7,7 +7,12 @@ interface EventBlockProps {
   location: React.ReactNode;
 }
 
-export default function EventBlock({ icon, title, time, location }: EventBlockProps) {
+export default function EventBlock({
+  icon,
+  title,
+  time,
+  location,
+}: EventBlockProps) {
   return (
     <div
       className="
@@ -15,7 +20,6 @@ export default function EventBlock({ icon, title, time, location }: EventBlockPr
       flex-col
       items-center
       gap-8
-
       lg:grid
       lg:grid-cols-2
       lg:items-center
@@ -27,10 +31,11 @@ export default function EventBlock({ icon, title, time, location }: EventBlockPr
       <div className="flex justify-center lg:justify-end">
         <Image
           src={icon}
+          alt={`icono ${title}`}
           width={140}
           height={140}
-          alt="icono"
-          className="opacity-80 w-50 sm:w-40 lg:w-40"
+          sizes="(max-width: 768px) 120px, 140px"
+          className="opacity-80 w-40 sm:w-40 lg:w-40"
         />
       </div>
 
@@ -66,10 +71,11 @@ export default function EventBlock({ icon, title, time, location }: EventBlockPr
 
         </div>
 
-        {/* BOTON */}
+        {/* BOTÓN */}
         <a
           href="https://maps.app.goo.gl/vncLUuC5tYV5QNi58"
           target="_blank"
+          rel="noopener noreferrer"
           className="
           bg-[#ffb9bd]
           text-white
