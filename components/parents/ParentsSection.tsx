@@ -1,6 +1,6 @@
 export default function ParentsSection() {
   return (
-    <section id="nuestros-padres" className=" relative w-full max-w-[420px] lg:max-w-[1200px] bg-white py-8 sm:py-16 flex justify-center overflow-hidden ">
+    <section id="nuestros-padres" className=" relative w-full max-w-[420px] lg:max-w-[1200px] bg-white py-16 sm:py-16 flex justify-center overflow-hidden ">
       {/* FLOR LATERAL IZQUIERDA */}
       <img src="/images/flores-lateral.webp" className=" absolute left-[-90px] top-[250px] md:top-[100px] lg:top-[120px] w-80 md:w-80 lg:w-100 opacity-90
            pointer-events-none select-none rotate-[-40deg] " alt="flor lateral"/>
@@ -15,8 +15,8 @@ export default function ParentsSection() {
 
         {/* FLORES CENTRALES */}
         <img
-          src="/images/flores-centro.webp"
-          className="w-60 md:w-70 lg:w-80 mt-2"
+          src="/images/arreglo-flores.webp"
+          className="w-40 md:w-50 lg:w-60 mt-2"
           alt="flores"
         />
 
@@ -73,8 +73,8 @@ export default function ParentsSection() {
 
         {/* FLORES INFERIORES */}
         <img
-          src="/images/flores-centro.webp"
-          className="w-60 md:w-70 lg:w-80 mt-4"
+          src="/images/arreglo-flores.webp"
+          className="w-40 md:w-50 lg:w-60 mt-4"
           alt="flores"
         />
       </div>

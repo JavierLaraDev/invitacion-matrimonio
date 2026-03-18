@@ -1,3 +1,6 @@
+import Image from "next/image";
+import EventBlock from "./EventBlock";
+
 export default function LocationSection() {
   return (
     <section
@@ -5,221 +8,146 @@ export default function LocationSection() {
       className="
       relative
       w-full
-      max-w-[420px]
-      lg:max-w-[1200px]
+      max-w-[1200px]
       mx-auto
       bg-white
-      py-8
+      py-16
       sm:py-16
       px-6
+      sm:px-8
+      lg:px-12
       overflow-hidden
       "
     >
-      {/* FLOR DERECHA */}
-      <img
+
+      {/* FLORES DECORATIVAS */}
+
+      <Image
         src="/images/flor-rosa.webp"
-        className="absolute right-[-70px] top-20 w-36 opacity-90 pointer-events-none select-none"
+        width={150}
+        height={150}
         alt="flor"
+        className="absolute right-[-50px] top-22 w-36 sm:w-36 opacity-90 pointer-events-none select-none"
       />
 
-      {/* FLOR IZQUIERDA */}
-      <img
+      <Image
         src="/images/pimpollo.webp"
-        className="absolute left-[-40px] bottom-100 w-36 opacity-90 pointer-events-none select-none"
+        width={150}
+        height={150}
         alt="flor"
+        className="absolute left-[-20px] bottom-270 sm:bottom-360 lg:bottom-380 w-36 sm:w-36 opacity-90 pointer-events-none select-none"
       />
-      {/* FLOR DERECHA */}
-      <img
+
+      <Image
         src="/images/flor-rosa.webp"
-        className="absolute right-[-70px] top-230 sm:top-160 md:top-160 w-36 opacity-90 pointer-events-none select-none"
+        width={150}
+        height={150}
         alt="flor"
+        className="absolute right-[-50px] top-[950px] sm:top-[550px] lg:top-[560px] w-36 sm:w-36 opacity-90 pointer-events-none select-none"
       />
 
       {/* TEXTO SUPERIOR */}
+
       <p
         className="
         text-gray-600
         text-2xl
+        sm:text-2xl
+        lg:text-3xl
         font-['Alex_Brush']
         leading-relaxed
         text-center
-        max-w-[420px]
+        max-w-[500px]
         mx-auto
-        mb-10
-        lg:mb-16
+        mb-2
+        sm:mb-4
+        lg:mb-8
         "
       >
         Con alegría te invitamos a ser parte de este día tan especial
         en nuestras vidas
       </p>
 
-      {/* CONTENEDOR */}
-      <div
-        className="
-        flex
-        flex-col
-        items-center
-        gap-8
+      {/* CEREMONIA */}
 
-        lg:grid
-        lg:grid-cols-2
-        lg:items-center
-        lg:gap-24
-        py-8
-        "
-      >
-        {/* ICONO IGLESIA */}
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src="/images/templo.webp"
-            className="w-32 lg:w-52 opacity-80"
-            alt="iglesia"
-          />
-        </div>
+      <EventBlock
+        icon="/images/templo.webp"
+        title="CEREMONIA RELIGIOSA"
+        time="14:00 Hrs."
+        location={
+          <>
+            Parroquia Nuestra Señora del Carmen <br />
+            y San Maximiliano Kolbe <br />
+            Av. Maximiliano Kolbe y Eucaliptos
+          </>
+        }
+      />
 
-        {/* INFORMACIÓN */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+      {/* RECEPCIÓN */}
 
-          {/* TITULO */}
-          <h3
-            className="
-            font-[cinzel]
-            text-[#c78c3a]
-            text-xl
-            lg:text-3xl
-            mb-6
-            "
-          >
-            CEREMONIA RELIGIOSA
-          </h3>
+      <EventBlock
+        icon="/images/recepcion.webp"
+        title="RECEPCIÓN SOCIAL"
+        time="16:00 Hrs."
+        location={
+          <>
+            Salón de Eventos Nelly's <br />
+            Av. Villazón km 6 <span className="text-sm">1/2</span>
+          </>
+        }
+      />
 
-          {/* INFO */}
-          <div className="flex items-center gap-6 mb-10">
+{/* FOTO + ONDA */}
+<div className="relative mt-16 -mx-6 sm:-mx-8 lg:-mx-12">
 
-            {/* HORA */}
-            <div className="text-[#c78c3a] text-xl lg:text-2xl whitespace-nowrap">
-              14:00 Hrs.
-            </div>
+  <Image
+    src="/images/pareja-horizontal.webp"
+    width={1200}
+    height={900}
+    alt="novios"
+    className="w-full h-[350px] sm:h-[420px] md:h-[520px] lg:h-[820px] object-cover block"
+  />
 
-            {/* LINEA */}
-            <div className="w-[5px] h-30 sm:h-16 md:h-16 bg-[#c78c3a]" />
+  {/* ONDA SUPERIOR — pegada al fondo de la imagen */}
+  <div className="absolute -bottom-px left-0 w-full">
+    <svg
+      viewBox="0 0 500 60"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full block"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 60 L0 30 Q150 60 250 35 Q350 10 500 25 L500 60 Z"
+        fill="#d6b48a"
+      />
+    </svg>
+  </div>
 
-            {/* DIRECCION */}
-            <div className="text-gray-600 text-lg leading-snug">
-              Parroquia Nuestra Señora del Carmen Y San Maximiliano Kolbe <br />
-              Av.MAximiliano Kolbe y Eucaliptos <br />
+</div>
 
-            </div>
+{/* MENSAJE */}
+<div className="-mx-6 sm:-mx-8 lg:-mx-12 bg-[#d6b48a] text-white text-center font-['Alex_Brush'] leading-relaxed sm:px-16 lg:px-32 py-12 sm:py-16 text-xl sm:text-2xl lg:text-3xl">
+  Hoy, todo lo vivido nos ha llevado a este momento,
+  donde nuestros corazones se entrelazan para siempre
+  listos para escribir juntos el resto de nuestras vidas.
+</div>
 
-          </div>
+{/* ONDA INFERIOR */}
+<div className="-mx-6 sm:-mx-8 lg:-mx-12 -mt-1">
+  <svg
+    viewBox="0 0 500 60"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full block"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0 0 L500 0 L500 35 Q375 10 250 35 Q125 60 0 35 Z"
+      fill="#d6b48a"
+    />
+  </svg>
+</div>
 
-          {/* BOTON */}
-          <a
-            href="https://maps.app.goo.gl/vncLUuC5tYV5QNi58"
-            target="_blank"
-            className="
-            bg-[#ffb9bd]
-            text-white
-            px-15
-            py-2
-            rounded-tr-[150px]
-            rounded-bl-[150px] 
-            rounded-tl-[35px]
-            rounded-br-[35px]
-            text-xl
-            shadow-md
-            hover:bg-[#ffa1a6]
-            transition
-            "
-          >
-            Ver Ubicación
-          </a>
 
-        </div>
-      </div>
-      {/* CONTENEDOR */}
-      <div
-        className="
-        flex
-        flex-col
-        items-center
-        gap-8
-
-        lg:grid
-        lg:grid-cols-2
-        lg:items-center
-        lg:gap-24
-        "
-      >
-        {/* ICONO recepcion */}
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src="/images/recepcion.webp"
-            className="w-32 lg:w-52 opacity-80"
-            alt="iglesia"
-          />
-        </div>
-
-        {/* INFORMACIÓN */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left py-8">
-
-          {/* TITULO */}
-          <h3
-            className="
-            font-[cinzel]
-            text-[#c78c3a]
-            text-xl
-            lg:text-3xl
-            mb-6
-            "
-          >
-            RECEPCIÓN SOCIAL
-          </h3>
-
-          {/* INFO */}
-          <div className="flex items-center gap-6 mb-10">
-
-            {/* HORA */}
-            <div className="text-[#c78c3a] text-xl lg:text-2xl whitespace-nowrap">
-              16:00 Hrs.
-            </div>
-
-            {/* LINEA */}
-            <div className="w-[2px] h-16 bg-[#c78c3a]" />
-
-            {/* DIRECCION */}
-            <div className="text-gray-600 text-lg leading-snug">
-              Salon de Eventos Nelly's <br />
-              Av. Villazon km 6 <span className="text-sm">1/2</span>  <br />
-            </div>
-
-          </div>
-
-          {/* BOTON */}
-          <a
-            href="https://maps.app.goo.gl/vncLUuC5tYV5QNi58"
-            target="_blank"
-            className="
-            bg-[#ffb9bd]
-            text-white
-            px-15
-            py-2
-            rounded-tr-[150px]
-            rounded-bl-[150px] 
-            rounded-tl-[35px]
-            rounded-br-[35px]
-            text-xl
-            shadow-md
-            hover:bg-[#ffa1a6]
-            transition
-            "
-          >
-            Ver Ubicación
-          </a>
-
-        </div>
-      </div>
-      
     </section>
   );
 }

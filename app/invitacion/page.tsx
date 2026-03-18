@@ -3,6 +3,10 @@ import { Alex_Brush } from "next/font/google";
 import DateSection from "@/components/date/DateSection";
 import ParentsSection from "@/components/parents/ParentsSection";
 import LocationSection from "@/components/ubicacion/LocationSection";
+import DressCodeSection from "@/components/codigoVestimenta/DressCodeSection";
+import ItinerarySection from "@/components/itinerario/ItinerarySection";
+
+
 
 const alexBrush = Alex_Brush({
   weight: "400",
@@ -17,6 +21,8 @@ export default function InvitacionPage() {
       <DateSection />
       <ParentsSection />
       <LocationSection />
+      <DressCodeSection />
+      <ItinerarySection />
     </div>
   );
 }

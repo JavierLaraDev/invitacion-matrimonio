@@ -11,6 +11,7 @@ export default function Hero(){
   h-full
   object-cover
   object-center
+  
   "
   style={{
     WebkitMaskImage: `

@@ -64,7 +64,7 @@ export default function DateSection() {
     mx-auto
     text-center
     px-4 md:px-6
-    py-8 md:py-16
+    py-16 md:py-16
 
     flex
     flex-col
