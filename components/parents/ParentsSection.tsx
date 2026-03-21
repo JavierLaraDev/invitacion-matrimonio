@@ -10,7 +10,7 @@ export default function ParentsSection() {
     >
       {/* FLOR LATERAL IZQUIERDA */}
       <Image
-        src="/images/flores-lateral.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto,q_auto,w_400/flores-lateral_ivvtun.webp"
         alt="flor lateral"
         width={400}
         height={400}
@@ -40,7 +40,7 @@ export default function ParentsSection() {
 
         {/* FLORES CENTRALES */}
         <Image
-          src="/images/arreglo-flores.webp"
+          src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_300/arreglo-flores_gceljq.webp"
           alt="flores decorativas"
           width={240}
           height={240}
@@ -100,7 +100,7 @@ export default function ParentsSection() {
 
         {/* FLORES INFERIORES */}
         <Image
-          src="/images/arreglo-flores.webp"
+          src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_300/arreglo-flores_gceljq.webp"
           alt="flores decorativas"
           width={240}
           height={240}

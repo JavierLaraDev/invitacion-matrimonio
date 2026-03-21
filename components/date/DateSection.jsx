@@ -34,7 +34,7 @@ export default function DateSection() {
 
       {/* FLOR IZQUIERDA */}
       <Image
-        src="/images/flor-left.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto,q_auto/flor-left_xzibqx.webp"
         alt="flor decorativa izquierda"
         width={300}
         height={300}
@@ -51,7 +51,7 @@ export default function DateSection() {
 
       {/* FLOR DERECHA */}
       <Image
-        src="/images/flor-right.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_300/flor-right_zmckyt.webp"
         alt="flor decorativa derecha"
         width={300}
         height={300}

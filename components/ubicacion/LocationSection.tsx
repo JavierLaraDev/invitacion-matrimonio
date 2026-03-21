@@ -23,7 +23,7 @@ export default function LocationSection() {
       {/* FLORES DECORATIVAS */}
 
       <Image
-        src="/images/flor-rosa.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/flor-rosa_shcxm1.webp"
         width={150}
         height={150}
         alt="flor"
@@ -31,7 +31,7 @@ export default function LocationSection() {
       />
 
       <Image
-        src="/images/pimpollo.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/pimpollo_jd5ls8.webp"
         width={150}
         height={150}
         alt="flor"
@@ -39,7 +39,7 @@ export default function LocationSection() {
       />
 
       <Image
-        src="/images/flor-rosa.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/flor-rosa_shcxm1.webp"
         width={150}
         height={150}
         alt="flor"
@@ -71,7 +71,7 @@ export default function LocationSection() {
       {/* CEREMONIA */}
 
       <EventBlock
-        icon="/images/templo.webp"
+        icon="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_150/templo_dcwe2c.webp"
         title="CEREMONIA RELIGIOSA"
         time="14:00 Hrs."
         location={
@@ -86,7 +86,7 @@ export default function LocationSection() {
       {/* RECEPCIÓN */}
 
       <EventBlock
-        icon="/images/recepcion.webp"
+        icon="https://res.cloudinary.com/dncrzrttk/image/upload/v1774060508/recepcion_emevgy.webp"
         title="RECEPCIÓN SOCIAL"
         time="16:00 Hrs."
         location={
@@ -101,7 +101,7 @@ export default function LocationSection() {
 <div className="relative mt-16 -mx-6 sm:-mx-8 lg:-mx-12">
 
   <Image
-    src="/images/pareja-horizontal.webp"
+    src="https://res.cloudinary.com/dncrzrttk/image/upload/v1774060522/pareja-horizontal_tgaz4i.webp"
     width={1200}
     height={900}
     alt="novios"

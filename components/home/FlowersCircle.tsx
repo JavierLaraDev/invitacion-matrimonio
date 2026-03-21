@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { cldFlower } from "@/lib/cloudinary";
 
 export default function FlowersCircle() {
   return (
@@ -24,7 +25,6 @@ export default function FlowersCircle() {
             className="
             text-[#c59d5f]
             text-5xl
-            lg:text-5xl
             text-center
             font-['Alex_Brush']
           "
@@ -39,35 +39,35 @@ export default function FlowersCircle() {
 
         {/* FLORES ARRIBA */}
         <Image
-          src="/images/flores-arriba.webp"
+          src={cldFlower("flores-arriba_iblawe.webp")}
           alt="flores decorativas arriba"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
           priority
           className="
             absolute
-            w-40
-            lg:w-40
+            w-32 sm:w-40 lg:w-44
             -top-6
             right-[-10px]
             rotate-[20deg]
+            pointer-events-none
           "
         />
 
         {/* FLORES ABAJO */}
         <Image
-          src="/images/flores-abajo.webp"
+          src={cldFlower("flores-abajo_qoopna.webp")}
           alt="flores decorativas abajo"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
           priority
           className="
             absolute
-            w-40
-            lg:w-40
+            w-32 sm:w-40 lg:w-44
             -bottom-7
             left-[-10px]
             rotate-[20deg]
+            pointer-events-none
           "
         />
       </div>

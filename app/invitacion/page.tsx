@@ -5,6 +5,7 @@ import ParentsSection from "@/components/parents/ParentsSection";
 import LocationSection from "@/components/ubicacion/LocationSection";
 import DressCodeSection from "@/components/codigoVestimenta/DressCodeSection";
 import ItinerarySection from "@/components/itinerario/ItinerarySection";
+import AlbumSection from "@/components/album/AlbumSection";
 
 
 
@@ -23,6 +24,7 @@ export default function InvitacionPage() {
       <LocationSection />
       <DressCodeSection />
       <ItinerarySection />
+      <AlbumSection />
     </div>
   );
 }

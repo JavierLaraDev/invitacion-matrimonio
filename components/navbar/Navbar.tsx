@@ -89,7 +89,7 @@ export default function Navbar() {
         top-0
         right-0
         h-full
-        w-[40%]
+        w-[50%]
         max-w-[300px]
         bg-white
         flex

@@ -21,7 +21,7 @@ export default function DressCodeSection() {
 
       {/* FLOR DERECHA */}
       <Image
-        src="/images/flor-rosa.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/flor-rosa_shcxm1.webp"
         alt="flor decorativa"
         width={160}
         height={160}
@@ -31,7 +31,7 @@ export default function DressCodeSection() {
 
       {/* FLOR IZQUIERDA */}
       <Image
-        src="/images/pimpollo.webp"
+        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/pimpollo_jd5ls8.webp"
         alt="flor decorativa"
         width={160}
         height={160}
@@ -44,7 +44,7 @@ export default function DressCodeSection() {
 
         {/* ICONO */}
         <Image
-          src="/images/corbatin.webp"
+          src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/corbatin_wyglxn.webp"
           alt="icono de vestimenta formal"
           width={256}
           height={256}
@@ -89,7 +89,7 @@ export default function DressCodeSection() {
       {/* FLORES INFERIORES */}
       <div className="flex justify-center mt-8">
         <Image
-          src="/images/arreglo-flores.webp"
+          src="https://res.cloudinary.com/dncrzrttk/image/upload/c_scale,w_300/f_auto/q_auto/arreglo-flores_gceljq.webp"
           alt="flores decorativas"
           width={256}
           height={256}

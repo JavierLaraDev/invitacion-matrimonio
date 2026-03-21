@@ -1,0 +1,36 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { cldPhoto } from "@/lib/cloudinary";
+import AlbumGrid from "./AlbumGrid";
+
+const photos = [
+  cldPhoto("album-uno_1_y2wtqz.webp"),
+  cldPhoto("album-dos_1_ofjyen.webp"),
+  cldPhoto("album-tres_1_kktwk8.webp"),
+  cldPhoto("album-cuatro_pp52vj.webp"),
+  cldPhoto("album-cinco_mkb52o.webp"),
+];
+
+export default function AlbumSection() {
+  return (
+    <section
+      id="album"
+      className="relative py-16 px-6 bg-white overflow-hidden"
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center text-4xl md:text-5xl font-[Alex_Brush] text-[#c58a3c] mb-12"
+      >
+        Álbum de Fotos
+      </motion.h2>
+
+      <div className="max-w-6xl mx-auto">
+        <AlbumGrid photos={photos} />
+      </div>
+    </section>
+  );
+}
