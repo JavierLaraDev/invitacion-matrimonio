@@ -6,6 +6,8 @@ interface EventBlockProps {
   title: string;
   time: string;
   location: React.ReactNode;
+  mapUrl?: string; // URL opcional para el botón de ubicación
+  mapLabel?: string; // Texto del botón (opcional)
 }
 
 export default function EventBlock({
@@ -13,21 +15,12 @@ export default function EventBlock({
   title,
   time,
   location,
+  mapUrl,
+  mapLabel = "Ver Ubicación",
 }: EventBlockProps) {
   return (
-    <div
-      className="
-      flex
-      flex-col
-      items-center
-      gap-8
-      lg:grid
-      lg:grid-cols-2
-      lg:items-center
-      lg:gap-20
-      py-4
-      "
-    >
+    <div className="flex flex-col items-center gap-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-20 py-4">
+      
       {/* ICONO */}
       <div className="flex justify-center lg:justify-end">
         <Image
@@ -43,23 +36,11 @@ export default function EventBlock({
       {/* INFORMACIÓN */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
 
-        {/* TITULO */}
-        <h3
-          className="
-          font-[cinzel]
-          text-[#c78c3a]
-          text-lg
-          sm:text-xl
-          lg:text-3xl
-          mb-6
-          "
-        >
+        <h3 className="font-[cinzel] text-[#c78c3a] text-lg sm:text-xl lg:text-3xl mb-6">
           {title}
         </h3>
 
-        {/* INFO */}
         <div className="flex items-center gap-6 mb-10">
-
           <div className="text-[#c78c3a] text-lg sm:text-xl lg:text-2xl whitespace-nowrap">
             {time}
           </div>
@@ -69,32 +50,19 @@ export default function EventBlock({
           <div className="text-gray-600 text-base sm:text-lg leading-snug">
             {location}
           </div>
-
         </div>
 
-        {/* BOTÓN */}
-        <a
-          href="https://maps.app.goo.gl/vncLUuC5tYV5QNi58"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-          bg-[#ffb9bd]
-          text-white
-          px-10
-          py-2
-          rounded-tr-[150px]
-          rounded-bl-[150px]
-          rounded-tl-[35px]
-          rounded-br-[35px]
-          text-base
-          sm:text-lg
-          shadow-md
-          hover:bg-[#ffa1a6]
-          transition
-          "
-        >
-          Ver Ubicación
-        </a>
+        {/* BOTÓN UBICACIÓN */}
+        {mapUrl && (
+          <a
+            href={mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#ffb9bd] text-white px-10 py-2 rounded-tr-[150px] rounded-bl-[150px] rounded-tl-[35px] rounded-br-[35px] text-base sm:text-lg shadow-md hover:bg-[#ffa1a6] transition"
+          >
+            {mapLabel}
+          </a>
+        )}
 
       </div>
     </div>

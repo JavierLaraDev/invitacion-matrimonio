@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import EventBlock from "./EventBlock";
-import { cldFlower, cldIcon,cldHero } from "@/lib/cloudinary";
+import { cldFlower, cldIcon, cldHero } from "@/lib/cloudinary";
 export default function LocationSection() {
   return (
-     <section
+    <section
       id="ubicacion"
       className="
         relative
@@ -79,9 +79,9 @@ export default function LocationSection() {
             Av. Maximiliano Kolbe y Eucaliptos
           </>
         }
+        mapUrl="https://maps.app.goo.gl/9gGcJkd5mM6HxaET6?g_st=aw" // enlace del templo
+        mapLabel="Ver Ubicación"
       />
-
-      {/* RECEPCIÓN */}
 
       <EventBlock
         icon={cldIcon("recepcion_emevgy.webp")}
@@ -93,57 +93,59 @@ export default function LocationSection() {
             Av. Villazón km 6 <span className="text-sm">1/2</span>
           </>
         }
+        mapUrl="https://maps.app.goo.gl/vncLUuC5tYV5QNi58" // enlace de la recepción
+        mapLabel="Ver Ubicación"
       />
 
-{/* FOTO + ONDA */}
-<div className="relative mt-16 -mx-6 sm:-mx-8 lg:-mx-12">
+      {/* FOTO + ONDA */}
+      <div className="relative mt-16 -mx-6 sm:-mx-8 lg:-mx-12">
 
-  <Image
-    src={cldHero("pareja-horizontal_tgaz4i.webp")}
-    width={1200}
-    height={900}
-    alt="novios"
-    className="w-full h-[350px] sm:h-[420px] md:h-[520px] lg:h-[820px] object-cover block"
-  />
+        <Image
+          src={cldHero("pareja-horizontal_tgaz4i.webp")}
+          width={1200}
+          height={900}
+          alt="novios"
+          className="w-full h-[350px] sm:h-[420px] md:h-[520px] lg:h-[820px] object-cover block"
+        />
 
-  {/* ONDA SUPERIOR — pegada al fondo de la imagen */}
-  <div className="absolute -bottom-px left-0 w-full">
-    <svg
-      viewBox="0 0 500 60"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full block"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0 60 L0 30 Q150 60 250 35 Q350 10 500 25 L500 60 Z"
-        fill="#d6b48a"
-      />
-    </svg>
-  </div>
+        {/* ONDA SUPERIOR — pegada al fondo de la imagen */}
+        <div className="absolute -bottom-px left-0 w-full">
+          <svg
+            viewBox="0 0 500 60"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full block"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 60 L0 30 Q150 60 250 35 Q350 10 500 25 L500 60 Z"
+              fill="#d6b48a"
+            />
+          </svg>
+        </div>
 
-</div>
+      </div>
 
-{/* MENSAJE */}
-<div className="-mx-6 sm:-mx-8 lg:-mx-12 bg-[#d6b48a] text-white text-center font-['Alex_Brush'] leading-relaxed sm:px-16 lg:px-32 py-12 sm:py-16 text-xl sm:text-2xl lg:text-3xl">
-  Hoy, todo lo vivido nos ha llevado a este momento,
-  donde nuestros corazones se entrelazan para siempre
-  listos para escribir juntos el resto de nuestras vidas.
-</div>
+      {/* MENSAJE */}
+      <div className="-mx-6 sm:-mx-8 lg:-mx-12 bg-[#d6b48a] text-white text-center font-['Alex_Brush'] leading-relaxed sm:px-16 lg:px-32 py-12 sm:py-16 text-xl sm:text-2xl lg:text-3xl">
+        Hoy, todo lo vivido nos ha llevado a este momento,
+        donde nuestros corazones se entrelazan para siempre
+        listos para escribir juntos el resto de nuestras vidas.
+      </div>
 
-{/* ONDA INFERIOR */}
-<div className="-mx-6 sm:-mx-8 lg:-mx-12 -mt-1">
-  <svg
-    viewBox="0 0 500 60"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-full block"
-    preserveAspectRatio="none"
-  >
-    <path
-      d="M0 0 L500 0 L500 35 Q375 10 250 35 Q125 60 0 35 Z"
-      fill="#d6b48a"
-    />
-  </svg>
-</div>
+      {/* ONDA INFERIOR */}
+      <div className="-mx-6 sm:-mx-8 lg:-mx-12 -mt-1">
+        <svg
+          viewBox="0 0 500 60"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full block"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 0 L500 0 L500 35 Q375 10 250 35 Q125 60 0 35 Z"
+            fill="#d6b48a"
+          />
+        </svg>
+      </div>
 
 
     </section>
