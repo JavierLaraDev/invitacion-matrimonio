@@ -1,3 +1,4 @@
+"use client";
 import { Event } from "./ItinerarySection"
 
 export default function Card({

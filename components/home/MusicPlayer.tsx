@@ -60,7 +60,7 @@ export default function MusicPlayer() {
       {/* 🔥 AUDIO OPTIMIZADO */}
       <audio
         ref={audioRef}
-        src="/music/mojado.mp4"
+        src="/music/mas_que_amor.mp3"
         preload="none" // 🚀 NO carga hasta que el usuario interactúe
       />
 

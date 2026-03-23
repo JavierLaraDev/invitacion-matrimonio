@@ -1,3 +1,4 @@
+"use client";
 export default function Verse() {
   return (
     <section className="text-center px-10 py-0 sm:py-6 max-w-md mx-auto">

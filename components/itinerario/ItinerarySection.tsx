@@ -5,6 +5,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import TimelineItem from "./TimelineItem";
 import { cldIcon, cldFlower } from "@/lib/cloudinary";
+import { Alex_Brush } from "next/font/google";
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export type Event = {
   time: string;
@@ -33,8 +39,9 @@ export default function ItinerarySection() {
   return (
     <section
       id="itinerario"
-      className="relative py-16 px-6 bg-[#fdfaf7] overflow-hidden"
+      className="relative w-full py-16 px-6 overflow-hidden"
     >
+
       {/* FLORES */}
       <Image
         src={cldFlower("flor-rosa_shcxm1.webp")}
@@ -42,7 +49,7 @@ export default function ItinerarySection() {
         width={180}
         height={180}
         sizes="(max-width: 768px) 120px, 180px"
-        className="absolute right-[-80px] top-10 w-44 opacity-60 pointer-events-none select-none"
+        className="absolute right-[-80px] top-10 w-44 opacity-60 pointer-events-none"
       />
 
       <Image
@@ -51,7 +58,7 @@ export default function ItinerarySection() {
         width={180}
         height={180}
         sizes="(max-width: 768px) 120px, 180px"
-        className="absolute left-[-50px] bottom-0 w-44 opacity-60 pointer-events-none select-none"
+        className="absolute left-[-50px] bottom-0 w-44 opacity-60 pointer-events-none"
       />
 
       {/* TITULO */}
@@ -60,7 +67,7 @@ export default function ItinerarySection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center text-5xl font-[Alex_Brush] text-[#c58a3c] mb-10"
+        className={`${alexBrush.className} text-center text-5xl text-[#c58a3c] mb-10`}
       >
         Itinerario
       </motion.h2>

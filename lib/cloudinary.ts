@@ -1,6 +1,22 @@
-export const cld = (img: string, w: number, q: string = "auto") =>
-  `https://res.cloudinary.com/dncrzrttk/image/upload/f_auto,q_${q},w_${w}/${img}`;
+export const cld = (
+  img: string,
+  width: number,
+  quality: number = 80
+) => {
+  return `https://res.cloudinary.com/dncrzrttk/image/upload/f_auto,q_${quality},dpr_auto,c_limit,w_${width}/${img}`;
+};
 
-export const cldIcon = (img: string) => cld(img, 150);
-export const cldFlower = (img: string) => cld(img, 250);
-export const cldPhoto = (img: string) => cld(img, 900);
+/* ICONOS */
+export const cldIcon = (img: string) => cld(img, 120);
+
+/* FLORES */
+export const cldFlower = (img: string) => cld(img, 200);
+
+/* FOTOS ALBUM */
+export const cldPhoto = (img: string) => cld(img, 600);
+
+/* HERO */
+export const cldHero = (img: string) => cld(img, 1200);
+
+/* FULL WIDTH */
+export const cldFull = (img: string) => cld(img, 1600);

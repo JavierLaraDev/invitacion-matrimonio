@@ -1,23 +1,17 @@
+"use client";
+
 import { Home } from "@/components/home/Home";
-import { Alex_Brush } from "next/font/google";
 import DateSection from "@/components/date/DateSection";
 import ParentsSection from "@/components/parents/ParentsSection";
 import LocationSection from "@/components/ubicacion/LocationSection";
 import DressCodeSection from "@/components/codigoVestimenta/DressCodeSection";
 import ItinerarySection from "@/components/itinerario/ItinerarySection";
 import AlbumSection from "@/components/album/AlbumSection";
-
-
-
-const alexBrush = Alex_Brush({
-  weight: "400",
-  subsets: ["latin"],
-});
+import ConfirmationSection from "@/components/Confirmacion/ConfirmationSection";
 
 export default function InvitacionPage() {
   return (
-    <div className={`w-full max-w-[1200px] ${alexBrush.className}`}>
-
+    < div className="font-[alex_Brush]">
       <Home />
       <DateSection />
       <ParentsSection />
@@ -25,6 +19,7 @@ export default function InvitacionPage() {
       <DressCodeSection />
       <ItinerarySection />
       <AlbumSection />
+      <ConfirmationSection />
     </div>
   );
 }

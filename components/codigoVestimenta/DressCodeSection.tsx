@@ -1,42 +1,60 @@
 "use client";
 
 import Image from "next/image";
+import { cldFlower, cldIcon } from "@/lib/cloudinary";
+import { Alex_Brush } from "next/font/google";
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function DressCodeSection() {
   return (
     <section
       id="vestimenta"
       className="
-      relative
-      w-full
-      max-w-[420px]
-      lg:max-w-[1200px]
-      mx-auto
-      bg-white
-      py-16
-      px-6
-      overflow-hidden
+        relative
+        w-full
+        bg-white
+        py-16
+        px-6
+        overflow-hidden
       "
     >
 
       {/* FLOR DERECHA */}
       <Image
-        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/flor-rosa_shcxm1.webp"
+        src={cldFlower("flor-rosa_shcxm1.webp")}
         alt="flor decorativa"
         width={160}
         height={160}
         sizes="(max-width: 768px) 120px, 160px"
-        className="absolute right-[-50px] -top-[10px] w-40 opacity-90 pointer-events-none select-none"
+        className="
+          absolute
+          right-[-40px]
+          top-0
+          w-36
+          opacity-90
+          pointer-events-none
+        "
       />
 
       {/* FLOR IZQUIERDA */}
       <Image
-        src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/pimpollo_jd5ls8.webp"
+        src={cldFlower("pimpollo_jd5ls8.webp")}
         alt="flor decorativa"
         width={160}
         height={160}
         sizes="(max-width: 768px) 120px, 160px"
-        className="absolute left-[-50px] bottom-20 w-40 opacity-90 pointer-events-none select-none"
+        className="
+          absolute
+          left-[-40px]
+          bottom-20
+          w-36
+          opacity-90
+          pointer-events-none
+        "
       />
 
       {/* CONTENIDO */}
@@ -44,7 +62,7 @@ export default function DressCodeSection() {
 
         {/* ICONO */}
         <Image
-          src="https://res.cloudinary.com/dncrzrttk/image/upload/f_auto/q_auto,w_250/corbatin_wyglxn.webp"
+          src={cldIcon("corbatin_wyglxn.webp")}
           alt="icono de vestimenta formal"
           width={256}
           height={256}
@@ -54,13 +72,13 @@ export default function DressCodeSection() {
 
         {/* TITULO */}
         <h2
-          className="
-          font-[Alex_Brush]
-          text-[#c78c3a]
-          text-4xl
-          sm:text-5xl
-          mb-2
-          "
+          className={`
+            ${alexBrush.className}
+            text-[#c78c3a]
+            text-4xl
+            sm:text-5xl
+            mb-2
+          `}
         >
           Código de Vestimenta
         </h2>
@@ -73,12 +91,12 @@ export default function DressCodeSection() {
         {/* TEXTO */}
         <p
           className="
-          text-gray-500
-          italic
-          text-2xl
-          sm:text-3xl
-          max-w-[300px]
-          leading-relaxed
+            text-gray-500
+            italic
+            text-2xl
+            sm:text-3xl
+            max-w-[300px]
+            leading-relaxed
           "
         >
           (Damas, el color blanco está reservado para la novia)
@@ -89,7 +107,7 @@ export default function DressCodeSection() {
       {/* FLORES INFERIORES */}
       <div className="flex justify-center mt-8">
         <Image
-          src="https://res.cloudinary.com/dncrzrttk/image/upload/c_scale,w_300/f_auto/q_auto/arreglo-flores_gceljq.webp"
+          src={cldFlower("arreglo-flores_gceljq.webp")}
           alt="flores decorativas"
           width={256}
           height={256}

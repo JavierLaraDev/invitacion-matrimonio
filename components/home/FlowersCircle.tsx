@@ -2,10 +2,17 @@
 
 import Image from "next/image";
 import { cldFlower } from "@/lib/cloudinary";
+import { Alex_Brush } from "next/font/google";
+
+const alexBrush = Alex_Brush({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function FlowersCircle() {
   return (
     <section className="flex flex-col items-center">
+
       <div className="relative flex items-center justify-center">
 
         {/* CÍRCULO */}
@@ -19,15 +26,10 @@ export default function FlowersCircle() {
           flex
           items-center
           justify-center
-        "
+          "
         >
           <h2
-            className="
-            text-[#c59d5f]
-            text-5xl
-            text-center
-            font-['Alex_Brush']
-          "
+            className={`${alexBrush.className} text-[#c59d5f] text-5xl text-center`}
           >
             Dyland
             <br />
@@ -41,16 +43,15 @@ export default function FlowersCircle() {
         <Image
           src={cldFlower("flores-arriba_iblawe.webp")}
           alt="flores decorativas arriba"
-          width={250}
-          height={250}
-          priority
+          width={200}
+          height={200}
           className="
-            absolute
-            w-32 sm:w-40 lg:w-44
-            -top-6
-            right-[-10px]
-            rotate-[20deg]
-            pointer-events-none
+          absolute
+          w-32 sm:w-40 lg:w-44
+          -top-6
+          right-[-10px]
+          rotate-[20deg]
+          pointer-events-none
           "
         />
 
@@ -58,19 +59,19 @@ export default function FlowersCircle() {
         <Image
           src={cldFlower("flores-abajo_qoopna.webp")}
           alt="flores decorativas abajo"
-          width={250}
-          height={250}
-          priority
+          width={200}
+          height={200}
           className="
-            absolute
-            w-32 sm:w-40 lg:w-44
-            -bottom-7
-            left-[-10px]
-            rotate-[20deg]
-            pointer-events-none
+          absolute
+          w-32 sm:w-40 lg:w-44
+          -bottom-7
+          left-[-10px]
+          rotate-[20deg]
+          pointer-events-none
           "
         />
       </div>
+
     </section>
   );
 }
