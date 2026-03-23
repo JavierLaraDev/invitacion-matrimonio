@@ -11,11 +11,11 @@ const alexBrush = Alex_Brush({
 });
 
 const photos = [
-  cldPhoto("album-uno_1_y2wtqz.webp"),
   cldPhoto("album-dos_1_ofjyen.webp"),
   cldPhoto("album-tres_1_kktwk8.webp"),
   cldPhoto("album-cuatro_pp52vj.webp"),
   cldPhoto("album-cinco_mkb52o.webp"),
+
 ];
 
 export default function AlbumSection() {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-type Props = {
+export type AlbumPhotoProps = {
   src: string;
   alt: string;
   className?: string;
@@ -17,7 +17,7 @@ export default function AlbumPhoto({
   className,
   sizes,
   contain = false,
-}: Props) {
+}: AlbumPhotoProps) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -31,13 +31,9 @@ export default function AlbumPhoto({
         alt={alt}
         fill
         sizes={sizes}
-        className={`
-          ${contain ? "object-contain" : "object-cover"}
-          transition duration-500 group-hover:scale-110
-        `}
+        className={`${contain ? "object-contain" : "object-cover"} transition duration-500 group-hover:scale-110`}
       />
 
-      {/* Overlay elegante */}
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-500" />
     </motion.div>
   );
