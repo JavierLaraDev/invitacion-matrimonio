@@ -10,10 +10,10 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: "Dyland & Giancarla",
-  description: "Invitación de boda digital",
+  description: "Invitación",
   openGraph: {
-    title: "Dyland & Giancarla",
-    description: "Te invitamos a nuestra boda digital. ¡Confirma tu asistencia!",
+    title: "Nuestra boda - Dyland & Giancarla",
+    description: "Te invitamos a nuestra boda. ¡Confirma tu asistencia!",
     url: "https://invitacion-dyg.netlify.app/",
     siteName: "Invitación DyG",
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Dyland & Giancarla",
-    description: "Te invitamos a nuestra boda digital. ¡Confirma tu asistencia!",
+    description: "Te invitamos a nuestra boda. ¡Confirma tu asistencia!",
     images: ["https://invitacion-dyg.netlify.app/images/portada.png"],
   },
 };
