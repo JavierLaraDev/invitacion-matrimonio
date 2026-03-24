@@ -9,27 +9,33 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://invitacion-dyg.netlify.app"),
+
   title: "Dyland & Giancarla",
   description: "Invitación",
+
   openGraph: {
     title: "Nuestra boda - Dyland & Giancarla",
     description: "Te invitamos a nuestra boda. ¡Confirma tu asistencia!",
-    url: "https://invitacion-dyg.netlify.app/",
+    url: "https://invitacion-dyg.netlify.app",
     siteName: "Invitación DyG",
     images: [
       {
-        url: "https://invitacion-dyg.netlify.app/images/portada.png",
+        url: "/images/portada.png",
         width: 1200,
         height: 630,
+        alt: "Invitación Dyland y Giancarla",
       },
     ],
     type: "website",
+    locale: "es_ES",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Dyland & Giancarla",
-    description: "Te invitamos a nuestra boda. ¡Confirma tu asistencia!",
-    images: ["https://invitacion-dyg.netlify.app/images/portada.png"],
+    description: "Te invitamos a nuestra boda",
+    images: ["/images/portada.png"],
   },
 };
 
