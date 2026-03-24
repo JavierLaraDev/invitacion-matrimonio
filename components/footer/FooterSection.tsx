@@ -7,7 +7,7 @@ export default function FooterSection() {
 
   const devPhone = "59169522726";
   const devMessage =
-    "Hola Javier, me gustaría una invitación digital como la de Rodrigo y Marisabel";
+    "Hola Javier, me gustaría una invitación digital como la de Dyland y Giancarla";
 
   const devUrl = `https://wa.me/${devPhone}?text=${encodeURIComponent(
     devMessage

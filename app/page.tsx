@@ -83,7 +83,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 text-[#c59d5f] tracking-widest text-sm font-semibold">
-              28 . 03 . 2026
+              02 . 05 . 2026
             </p>
           </div>
         </div>

@@ -85,7 +85,7 @@ export default function LocationSection() {
 
       <EventBlock
         icon={cldIcon("recepcion_emevgy.webp")}
-        title="RECEPCIÓN SOCIAL"
+        title="CEREMONIA CIVIL & RECEPCIÓN"
         time="16:00 Hrs."
         location={
           <>

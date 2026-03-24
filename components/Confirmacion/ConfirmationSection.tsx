@@ -12,7 +12,9 @@ const alexBrush = Alex_Brush({
 
 export default function ConfirmationSection() {
   const phone = "59177495345";
-  const message = "Hola Giancarla, confirmo mi asistencia a la boda";
+
+  const message =
+    "Hola Giancarla, confirmo nuestra asistencia a la boda (2 personas)";
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
@@ -21,17 +23,17 @@ export default function ConfirmationSection() {
 
   return (
     <section
+      id="confirmacion"
       className="
         relative
         w-full
-        bg-[#fdfaf7]
         overflow-hidden
         pt-16
         pb-40
         px-6
       "
     >
-      {/* FLOR LATERAL */}
+      {/* FLORES LATERALES */}
       <Image
         src={leaf}
         alt=""
@@ -53,9 +55,9 @@ export default function ConfirmationSection() {
       {/* CONTENIDO */}
       <div className="relative z-10 max-w-xs md:max-w-md mx-auto text-center flex flex-col items-center gap-5">
 
-        {/* TEXTO */}
+        {/* TEXTO PRINCIPAL */}
         <p
-          className={`${alexBrush.className} text-gray-500 text-3xl md:text-4xl`}
+          className={`${alexBrush.className} text-gray-500 text-3xl md:text-4xl leading-relaxed`}
         >
           Es muy importante que nos confirmes tu asistencia
         </p>
@@ -95,13 +97,12 @@ export default function ConfirmationSection() {
           Confirma tu asistencia hasta el 20 de Abril
         </p>
 
-        {/* BOTON */}
+        {/* BOTON WHATSAPP SIN ANIMACION */}
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="
-            relative
             inline-flex
             items-center
             gap-2
@@ -116,31 +117,53 @@ export default function ConfirmationSection() {
             shadow-md
             transition
             mt-3
-            group
           "
         >
+          <MessageCircle size={18} />
+          Confirmar asistencia
+        </a>
+
+        {/* INVITACION PARA DOS PERSONAS CON PING */}
+        <div className="relative mt-6 max-w-sm">
+
+          {/* EFECTO PING */}
           <span
             className="
               absolute
               inset-0
-              rounded-full
-              bg-[#f3a6a6]
+              rounded-xl
+              border
+              border-[#c78c3a]
+              bg-[#fff7ed]
               opacity-40
               animate-ping
-              group-hover:opacity-0
             "
           />
 
-          <span className="relative flex items-center gap-2">
-            <MessageCircle size={18} />
-            Confirmar asistencia
-          </span>
-        </a>
+          {/* CARD */}
+          <div
+            className="
+              relative
+              px-6
+              py-4
+              rounded-xl
+              border
+              border-[#c78c3a]
+              bg-[#fff7ed]
+              shadow-sm
+            "
+          >
+            <p className="text-[#c78c3a] font-semibold text-lg sm:text-xl">
+              Esta invitación es válida para dos personas
+            </p>
 
-        <p className="text-gray-400 italic text-lg">
-          Confirma con los novios
-        </p>
+            <p className="text-gray-500 text-sm mt-1">
+              Agradecemos confirmar la asistencia de ambos invitados
+            </p>
+          </div>
+        </div>
 
+        {/* TEXTO FINAL */}
         <h2
           className={`${alexBrush.className} text-[#c58a3c] text-5xl mt-6`}
         >

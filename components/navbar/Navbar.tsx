@@ -38,7 +38,6 @@ export default function Navbar() {
     { href: "#vestimenta", label: "Vestimenta" },
     { href: "#itinerario", label: "Itinerario" },
     { href: "#album", label: "Álbum" },
-    { href: "#regalos", label: "Regalos" },
     { href: "#confirmacion", label: "Confirmación" },
   ]
 
